@@ -40,13 +40,13 @@ public class PaymentController {
         return ResponseEntity.created(uri).body(paymentDto);
     }
 
-    @PutMapping
+    @PutMapping("/{id}")
     public ResponseEntity<PaymentDto> update(@PathVariable @NotNull Long id, @RequestBody @Valid PaymentDto dto){
         PaymentDto paymentDto = service.update(id, dto);
         return ResponseEntity.ok(paymentDto);
     }
 
-    @DeleteMapping
+    @DeleteMapping("/{id}")
     public ResponseEntity<PaymentDto> delete(@PathVariable @NotNull Long id){
         service.delete(id);
         return ResponseEntity.noContent().build();

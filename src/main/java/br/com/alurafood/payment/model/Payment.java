@@ -22,7 +22,7 @@ public class Payment {
 
     @NotNull
     @Positive
-    private BigDecimal value;
+    private BigDecimal amount;
 
     @NotBlank
     @Size(max = 100)
@@ -40,7 +40,7 @@ public class Payment {
     @Size(min = 3, max = 3)
     private String code;
 
-    @NotBlank
+    @NotNull
     @Enumerated(EnumType.STRING)
     private Status status;
 

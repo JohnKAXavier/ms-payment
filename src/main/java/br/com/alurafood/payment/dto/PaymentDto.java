@@ -11,7 +11,7 @@ import java.math.BigDecimal;
 public class PaymentDto {
 
     private Long id;
-    private BigDecimal value;
+    private BigDecimal amount;
     private String name;
     private String number;
     private String expiration;

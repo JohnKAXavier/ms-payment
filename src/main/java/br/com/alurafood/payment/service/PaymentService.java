@@ -34,7 +34,6 @@ public class PaymentService {
         Payment payment = mapper.map(dto, Payment.class);
         payment.setStatus(Status.CRIADO);
         repository.save(payment);
-
         return mapper.map(payment, PaymentDto.class);
     }
 
